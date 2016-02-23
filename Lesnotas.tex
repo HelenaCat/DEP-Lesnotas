@@ -456,36 +456,47 @@ Wat hier is weergegeven: wordt ge\"implementeerd met een geheugen: een opzoektab
 Wat je nu ziet is de waarheidstabel. Op het moment dat je de waarheidstabel hebt moet je niet meer nadenken wat het wordt in termen van AND en OR, je steekt dat in het geheugen en de component doet wat hij moet doen. Je hebt wel de beperking dat je meestal maar met 4 ingangen kan werken. Elke logische blok kan dus gelijk welke functie van 4 ingangsvariabelen realiseren.
 Dit is de manier waarop je een programmeerbare component kan maken.
 
-%TODO tot hier
-Slide 53: Spartan-3: je hebt een logische blok (CLB: configurable logic block). En elke slice is opgedeeld in 2 logische cellen, zie slide 54.
-Slide 54: binnen 1 configureerbare logische blok zitten 8 logische cellen in, dus je gaat altijd 8 logische cellen met een keer gebruiken. Als je hiernaar kijkt, kan je denken dat het nodeloos ingewikkeld gemaakt is. Ook hier geldt: wat zetten we erbij? Dingen die we goed denken te kunnen gebruiken. 
-Door er een beetje hardware bij te zetten (in het lichtgroen) kan je met een logische cel een optelling maken. Het is de moeite waard om dat te hebben.
-Evengoed hebben we dikwijls extra geheugen nodig, dat is in het blauw aangegeven.
-Dat rode stukje: die kiest tussen 2 ingangen. Door alleen dez eerbij te zetten kan je die 2 logische cellen comineren tot iets nieuw. Als je dus 2 logisch ecellen hebt, heb je 2 keer een functie van 4 variabelen. Maar heel dikwijls heb je meer vairabelen nodig. Door die rode selector erbij te zetten, kan je die 2 samenzetten door 1 functie vna 5 variabelen: je splitst uw waarheidstabel in 1 op: 1 waarbij de meest beduidende variabele 0 is en een waarbij de meest beduidende variabelen 1 is. Op die manier, door het feit dat die selector daar wijzigt, kan je een fucntie van 5 variabelen realiseren.
-Slide 55: schakelmatrices: de verbindingen worden gemaakt/verbroken met transistoren.  Hier is het getekend met NMOS-transistoren, ind e realiteit is dat ingewikkelder.  Je kan het programmeren vanuit een rAM-geheugen dat die poorten aanstuurt. 
-Slide 56: Je hebt een ontwikkelomgeving specifiek voor het soort componenten dat de fabrikant verkoopt.
-Slide 57: CAD-omgeving waarbinnen je het volledige ontwerp kan doen en dat je zovee mogelijk zal helpen om alle taken te doen op. de basistechnieken zijn al geimplementeerd in e software en zullen voor u verzorgd worden.
-Linksboven: project met bestanden. Je kan daar hierarchisch in werken. Je kan daar verschillende dingen op doen. Je hebt ook een venster met het resultaat. Rechts: overzcithsschema met ofwel schema ofwel resultaat van simulaties.
-Slide 59: Je bent niet verplicht om gebruikt te maken van 1 manier van input ingeven. In het voorbeeld op de slide is alles wat gecomindeerd. Je hetb een topschema met een paar dingen die al een beetje uitgwerkt zijn,a ndere idngen zijn nog gewoon bloikjes met een subschema waarop je kan klikken, dan wordt een lager niveau geopend en kan je dat ook in detail zien. 
-Ook nog andere dingen die afhangen van fabrikatn tot fabrikant zoals bv die logiCORE, soort macro.  Om dat allemaal afzonderlijk in de bibliotheek te hebben ,ziet men een soort macro. Dan wordt er nog een venster geopend waarin je instellingen kan maken (zie ontbrekende slide). Dit komt een beetje overeen met VHDL. Je moet niet weten wat daar allemaal odnerzit, de omgeving zal daar rekenign mee houen.
-Hetzelfe met de specifieke klokinstellingen. 
-Als we het over sequentiele schakeligen hebben, gaan e in eerste instantie toestandsdiagrammen gebruiken. Je kan zelfs een toestandsdiagram tekenen en die software weet hoe de dat toestandsdiagram efficient moet omzetten naar hardware. Alle tussenliggende stappen meot je dus niet doen. Je kan ook een vhdl-beschrijving doen. Soms is dit veel compacter.
+\paragraph{Slide 53:} Spartan-3: je hebt een logische blok (CLB: configurable logic block) en elke slice is opgedeeld in 2 logische cellen, zie \textbf{Slide 54}.
+
+\paragraph{Slide 54:} Binnen 1 configureerbare logische blok zitten 8 logische cellen in, dus je gaat altijd 8 logische cellen met een keer gebruiken. Als je hiernaar kijkt, kan je denken dat het nodeloos ingewikkeld gemaakt is. Ook hier geldt: wat zetten we erbij? $\rightarrow$ Dingen die we goed denken te kunnen gebruiken. \\
+Door er een beetje hardware bij te zetten (in het lichtgroen) kan je met een logische cel een optelling maken. Het is de moeite waard om dat te hebben.\\
+Evengoed hebben we dikwijls extra geheugen nodig, dat is in het blauw aangegeven.\\
+Dat rode stukje: die kiest tussen 2 ingangen. Door alleen deze erbij te zetten kan je die 2 logische cellen combineren tot iets nieuw. Als je dus 2 logische cellen hebt, heb je 2 keer een functie van 4 variabelen. Maar heel dikwijls heb je meer variabelen nodig. Door die rode selector erbij te zetten, kan je die 2 samenzetten tot 1 functie van 5 variabelen: je splitst uw waarheidstabel in 2 op: 1 waarbij de meest beduidende variabele 0 is en een waarbij de meest beduidende variabelen 1 is. Op die manier, door het feit dat die selector daar wijzigt, kan je een fucntie van 5 variabelen realiseren.
+
+\paragraph{Slide 55:} Schakelmatrices: de verbindingen worden gemaakt/verbroken met transistoren.  Hier is het getekend met NMOS-transistoren, in de realiteit is dat ingewikkelder.  Je kan het programmeren vanuit een RAM-geheugen dat die poorten aanstuurt. 
+
+\paragraph{Slide 56:} Je hebt een ontwikkelomgeving specifiek voor het soort componenten dat de fabrikant verkoopt.
+
+\paragraph{Slide 57:} CAD-omgeving waarbinnen je het volledige ontwerp kan doen en dat je zoveel mogelijk zal helpen om alle taken te doen. De basistechnieken zijn al ge\"implementeerd in de software en zullen voor u verzorgd worden.\\
+Linksboven: project met bestanden. Je kan daar hi\"erarchisch in werken. Je kan daar verschillende dingen op doen. Je hebt ook een venster met het resultaat. Rechts: overzichtsschema met ofwel schema ofwel resultaat van simulaties.
+
+\paragraph{Slide 59:} Je bent niet verplicht om gebruik te maken van 1 manier van input ingeven. In het voorbeeld op de slide is alles wat gecombineerd. Je hebt een topschema met een paar dingen die al een beetje uitgwerkt zijn, andere dingen zijn nog gewoon blokjes met een subschema waarop je kan klikken, dan wordt een lager niveau geopend en kan je dat ook in detail zien. \\
+Ook nog andere dingen die afhangen van fabrikant tot fabrikant zoals bv. die logiCORE, soort macro.  Om dat allemaal afzonderlijk in de bibliotheek te hebben, ziet men een soort macro. Dan wordt er nog een venster geopend waarin je instellingen kan maken (zie transitie slide). Dit komt een beetje overeen met VHDL. Je moet niet weten wat daar allemaal onderzit, de omgeving zal daar rekening mee houen.\\
+Hetzelfde met de specifieke klokinstellingen. \\
+Als we het over sequenti\"ele schakeligen hebben, gaan we in eerste instantie toestandsdiagrammen gebruiken. Je kan zelf een toestandsdiagram tekenen en die software weet hoe je dat toestandsdiagram effici\"ent moet omzetten naar hardware. Alle tussenliggende stappen moet je dus niet doen. Je kan ook een VHDL-beschrijving doen. Soms is dit veel compacter.\\
 Je kan dit allemaal gaan combineren in uw schema.
-Slide 60: je kan in die omgeving een logische simulatie doen. Dan krijg je daar de gegeven tekening uit: kje kan ingangssignalen aanleggen, zien waar er een reset gebeurt,… het telt hier op een decimale manier.
-Je kan ook elk bitje afzonderlijk bekijken hoe het zich in de tijd gedraag,t maar dit is geen tijdsgedrag, alleen een benadering want het toont alleen de logische werking. Er staat geen timinginformatie. Zelfs als hier tijden bij vermeld staan, het is geen echte timinginformatie.
-Slide 61: als je daarmee tevreden bent, moet je uw fysisch ontwerp gaan doen. Je moet gaan zeggen hoe je alles in de logische cellen steekt. Dat heeft dus niks met poorten te maken. Wat als je heel complexe berekeningen hebt op 27 bits, wat ga je in welke cel steken, hoe ga je ze verbinden, waar ga je welke cel zetten,… --> moet allemaal bepaald worden.
-Slide 62: Dat gebeurt automatisch. Er zijn verschillene stappen die moeten doorlopen worden: alle schema's meoten samengezet worden. Dan moet dat vertaald worden naar logische primitieven, men meot er een logisch ontwerp van maken: poorten en flipflops. Maar er staan geen poortne op uw FPGA. Dan komen de specifieke dingen: wat kan je het best gebruiken, hoe ze jet die logische schakeling het best om?
-2 stappen: logische schakeling maken en dan die zo goed mogelijk vertalen naar wat er op die FPGA komt. Dan heb je bepaald wat op die cellen moet komen en hoe ze verbonden zijn. Maar dan heb je hetzelfde probleem: welke cel zet je op welke plaats?
-Hier heb j eveneens een placement en routing stap. Als dat allemaal gedaan is, is uw fysisch ontwerp af, je hebt dan alle informatie: je weet wat welke cel doet, hoe die met andere cellen verbonden is en als fabrikant ken je de specs van die logische verbindingen en kan je het tijdsgedrag gaan voorspellen.
-Slide 63: Simulatie doen die eruit ziet als getoond, hier is de tijdsinformatie wel de echte tijdsinformatie. De piekjes die je ziet, waren er daarnet niet.
-Ontbrekende slide: de twee enen moeten nul worden en de tweede nul moet 1 worden. Het tijdsverloop toont wanneer wlelke bit wanneer verandert: er is altijd maar 1 signaal dat tegelijkertijd verandert. Alle piekjes die je zag op de vorige slide zijn ook niet zo erg, de tijdssimulatie zegt u alleen wat zal gebeuren, jij moet dan beslissen of da tok is of niet. 
-Slide 65: FPGA: omcirkeld (et helemaal zichtbaar). De rest zijnallemaal dingen om te experimenteren, drukknoppen,…
 
+\paragraph{Slide 60:} Je kan in die omgeving een logische simulatie doen. Dan krijg je daar de gegeven tekening uit: je kan ingangssignalen aanleggen, zien waar er een reset gebeurt,\ldots Het telt hier op een decimale manier.\\
+Je kan ook elk bitje afzonderlijk bekijken hoe het zich in de tijd gedraagt maar dit is geen tijdsgedrag, alleen een benadering want het toont alleen de logische werking. Er staat geen timinginformatie. Zelfs als hier tijden bij vermeld staan, is het geen echte timinginformatie.
 
-Slides: 4
+\paragraph{Slide 61:} Als je daarmee tevreden bent, moet je uw fysisch ontwerp gaan doen. Je moet gaan zeggen hoe je alles in de logische cellen steekt. Dat heeft dus niks met poorten te maken. Wat als je heel complexe berekeningen hebt op 27 bits, wat ga je in welke cel steken, hoe ga je ze verbinden, waar ga je welke cel zetten,\ldots ? $\rightarrow$ Moet allemaal bepaald worden.
 
-Slide 1: We gaan beginnen ontweren met de eenvoudigste schakelingen: combinatorische schakelingen. De ingang verandert en zal impact hebben op de uitgang, maar houdt geen rekening met het verleden: heeft dus geen gehuegen.
-Slide 2: alle dingen die op schema's zijn uitgelged, hoe ga je dat ine en hardwaretaal beschrijven? We beginnen met de combinatorische schakelingen, we willen die minimaliseren.
+\paragraph{Slide 62:} Dat gebeurt automatisch. Er zijn verschillene stappen die moeten doorlopen worden: alle schema's moeten samengezet worden. Dan moet dat vertaald worden naar logische primitieven, men moet er een logisch ontwerp van maken: poorten en flipflops. Maar er staan geen poorten op uw FPGA. Dan komen de specifieke dingen: wat kan je het best gebruiken, hoe ze je die logische schakeling het best om? \\
+2 stappen: logische schakeling maken en dan die zo goed mogelijk vertalen naar wat er op die FPGA komt. Dan heb je bepaald wat op die cellen moet komen en hoe ze verbonden zijn. Maar dan heb je hetzelfde probleem: welke cel zet je op welke plaats?\\
+Hier heb je eveneens een placement en routing stap. Als dat allemaal gedaan is, is uw fysisch ontwerp af, je hebt dan alle informatie: je weet wat welke cel doet, hoe die met andere cellen verbonden is en als fabrikant ken je de specificaties van die logische verbindingen en kan je het tijdsgedrag gaan voorspellen.
+
+\paragraph{Slide 63:} Simulatie doen die eruit ziet als getoond, hier is de tijdsinformatie wel de echte tijdsinformatie. De piekjes die je ziet, waren er daarnet niet.\\
+Transitie slide: de twee enen moeten nul worden en de tweede nul moet 1 worden. Het tijdsverloop toont wanneer welke bit verandert: er is altijd maar 1 signaal dat tegelijkertijd verandert. Alle piekjes die je zag op het vorige beeld (voor de transitie) zijn ook niet zo erg, de tijdssimulatie zegt u alleen wat zal gebeuren, jij moet dan beslissen of dat OK is of niet. 
+
+\paragraph{Slide 65:} FPGA: omcirkeld (en helemaal zichtbaar). De rest zijn allemaal dingen om te experimenteren, drukknoppen,\ldots
+
+\section{Slides: 4\_Combinatorisch}
+
+\paragraph{Slide 1:} We gaan beginnen ontwerpen met de eenvoudigste schakelingen: combinatorische schakelingen. De ingang verandert en zal impact hebben op de uitgang, maar houdt geen rekening met het verleden: heeft dus geen gehuegen.
+
+\paragraph{Slide 2:} Alle dingen die op schema's zijn uitgelgd, hoe ga je dat in een hardwaretaal beschrijven? We beginnen met de combinatorische schakelingen, we willen die minimaliseren.
+
+%TODO tot hier
 Slide 3: De eerste vraag die je je kan stellen is: waarom zou je dat willen? Het is omwille van de randvoorwaarden dat je wil minimaliseren. We streven naar een schakeling die zo goedkoop mogelijk is, zo snel mogelijk werkt en zo weinig mogelijk vermogen verbruikt. Het derde is niet vermeld op de slide, dat is evenredig met de capaciteit maal de frequentie maal de spanning in het kwadraat. Hoe gaan we zorgen dat we zo weinig mogelijk vermogen verbruiken? Als we de frequentie en de spanning constant houden, hangt het dus af van de capaciteit. Die hangt af van de grootte van de component. Als we dus zo compact mogelijk werken, zullen we ook een minimum aan vermogen verbruiken.
 Om 2 implementaties te kunnen vergelijken meoten we een maat hebben om de kostprijs en snelheid vna een schakeling te kunnen bepalen.
 De kostprijs is het makkelijkste: we hebben gezien dat de kostprijs van een poort evenredig is met het aantal ingagnen bij CMOS. Het hangt er wel vanaf welke technologie gebruikt wordt. Als het een niet-inverterende poort is, die kost nog eentje extra (alleen voor CMOS). Gaan we naar iets totaal anders kijken zoals de FPGA, daar telt het aantal transistoren niet. Daar hangt de kostprijs ervanaf of je een kleine of een grote FPGA kan gebruiken (met kleine logische cellen of grote). Het is hier evenredig met het aantal logische cellen. De kostprijs wordt hier dus anders bepaald. Dit is moeilijk omdat het moeilijk is om te schatten hoeveel logische cellen je gaat gebruiken.
